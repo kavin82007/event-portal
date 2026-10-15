@@ -20,6 +20,7 @@
     .event p { font-size: 14px; margin: 3px 0; }
     .tag { display: inline-block; background: #e8e0f8; color: #4a2c8a; padding: 2px 8px;
            border-radius: 10px; font-size: 12px; margin-bottom: 6px; }
+    .new { background: #27ae60; color: #fff; }
     table { width: 100%; border-collapse: collapse; background: #fff; }
     th, td { padding: 10px; border: 1px solid #ddd; text-align: left; font-size: 14px; }
     th { background: #4a2c8a; color: #fff; }
@@ -38,7 +39,7 @@
 <header>
   <h1>College Event Management Portal</h1>
   <p>Symposiums, Hackathons, Workshops, Cultural Fests and Competitions</p>
-  <span class="version">Version 1.0 - Stable</span>
+  <span class="version">Version 1.1 - New Event Added</span>
 </header>
 
 <nav>
@@ -62,6 +63,8 @@
       <p>Music, dance and drama performances</p><p>Date: 08 Nov 2026</p><p>Venue: Open Air Theatre</p></div>
     <div class="event"><span class="tag">Inter-College Competition</span><h3>RoboRumble</h3>
       <p>Robotics challenge across colleges</p><p>Date: 15 Nov 2026</p><p>Venue: Sports Complex</p></div>
+    <div class="event"><span class="tag new">NEW - Inter-College Competition</span><h3>Startup Pitch Day</h3>
+      <p>Pitch your startup idea to industry judges</p><p>Date: 22 Nov 2026</p><p>Venue: Seminar Hall 1</p></div>
   </div>
 </section>
 
@@ -74,6 +77,7 @@
     <tr><td>Cloud &amp; DevOps Workshop</td><td>02 Nov 2026</td><td>10:00 AM - 01:00 PM</td><td>Lab Block 2</td></tr>
     <tr><td>Riviera Nights</td><td>08 Nov 2026</td><td>06:00 PM - 10:00 PM</td><td>Open Air Theatre</td></tr>
     <tr><td>RoboRumble</td><td>15 Nov 2026</td><td>09:00 AM - 05:00 PM</td><td>Sports Complex</td></tr>
+    <tr><td>Startup Pitch Day</td><td>22 Nov 2026</td><td>10:00 AM - 03:00 PM</td><td>Seminar Hall 1</td></tr>
   </table>
 </section>
 
@@ -97,6 +101,7 @@
       <select id="event">
         <option>TechVista 2026</option><option>CodeStorm 24h</option>
         <option>Cloud &amp; DevOps Workshop</option><option>Riviera Nights</option><option>RoboRumble</option>
+        <option>Startup Pitch Day</option>
       </select>
       <button onclick="register()">Register</button>
       <div id="reg-msg" class="msg"></div>
@@ -117,11 +122,13 @@
     <tr><td>Cloud &amp; DevOps Workshop</td><td>Dr. S. Ganesh</td><td>60</td><td id="c-Cloud &amp; DevOps Workshop">58</td></tr>
     <tr><td>Riviera Nights</td><td>Prof. M. Fathima</td><td>500</td><td id="c-Riviera Nights">311</td></tr>
     <tr><td>RoboRumble</td><td>Dr. K. Prakash</td><td>80</td><td id="c-RoboRumble">47</td></tr>
+    <tr><td>Startup Pitch Day</td><td>Dr. V. Anand</td><td>50</td><td id="c-Startup Pitch Day">12</td></tr>
   </table>
 </section>
 
 <section id="updates">
   <h2>Event Updates</h2>
+  <div class="update">NEW: Startup Pitch Day added on 22 Nov 2026 - only 50 slots, register early!</div>
   <div class="update">CodeStorm 24h team registration closes on 27 Oct 2026.</div>
   <div class="update">Cloud &amp; DevOps Workshop has only a few seats left - register soon!</div>
   <div class="update">Riviera Nights passes will be issued at the Student Affairs office.</div>
@@ -130,7 +137,8 @@
 <footer>&copy; 2026 College Event Cell | Deployed via Jenkins, Docker &amp; Kubernetes</footer>
 
 <script>
-  const LIMITS = { "TechVista 2026": 200, "CodeStorm 24h": 120, "Cloud & DevOps Workshop": 60, "Riviera Nights": 500, "RoboRumble": 80 };
+  const LIMITS = { "TechVista 2026": 200, "CodeStorm 24h": 120, "Cloud & DevOps Workshop": 60,
+                   "Riviera Nights": 500, "RoboRumble": 80, "Startup Pitch Day": 50 };
   const regs = {};
   let nextId = 1001;
 

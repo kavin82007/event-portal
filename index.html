@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Event Management Portal</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; background: #f4f1fb; color: #222; }
+    header { background: #4a2c8a; color: #fff; text-align: center; padding: 20px; }
+    .version { display: inline-block; margin-top: 8px; background: #27ae60; padding: 4px 12px;
+               border-radius: 12px; font-size: 13px; font-weight: bold; }
+    nav { background: #351f66; text-align: center; padding: 10px; }
+    nav a { color: #fff; margin: 0 12px; text-decoration: none; font-weight: bold; }
+    section { max-width: 1100px; margin: 25px auto; padding: 0 15px; }
+    h2 { color: #4a2c8a; margin-bottom: 15px; border-left: 5px solid #4a2c8a; padding-left: 10px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; }
+    .event { background: #fff; border-radius: 8px; padding: 15px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); }
+    .event h3 { color: #351f66; margin-bottom: 6px; }
+    .event p { font-size: 14px; margin: 3px 0; }
+    .tag { display: inline-block; background: #e8e0f8; color: #4a2c8a; padding: 2px 8px;
+           border-radius: 10px; font-size: 12px; margin-bottom: 6px; }
+    table { width: 100%; border-collapse: collapse; background: #fff; }
+    th, td { padding: 10px; border: 1px solid #ddd; text-align: left; font-size: 14px; }
+    th { background: #4a2c8a; color: #fff; }
+    .box { background: #fff; border-radius: 8px; padding: 18px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); }
+    .box input, .box select { width: 100%; padding: 9px; margin: 6px 0 12px; border: 1px solid #ccc; border-radius: 6px; }
+    button { background: #4a2c8a; color: #fff; border: none; padding: 9px 16px; border-radius: 6px; cursor: pointer; }
+    .msg { margin-top: 10px; font-weight: bold; }
+    .two { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+    .update { background: #fff8e1; border-left: 5px solid #f39c12; padding: 12px; margin-bottom: 10px; }
+    ol { margin-left: 20px; } ol li { margin: 6px 0; }
+    footer { background: #351f66; color: #fff; text-align: center; padding: 15px; margin-top: 30px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>College Event Management Portal</h1>
+  <p>Symposiums, Hackathons, Workshops, Cultural Fests and Competitions</p>
+  <span class="version">Version 1.0 - Stable</span>
+</header>
+
+<nav>
+  <a href="#events">Events</a>
+  <a href="#schedule">Schedule</a>
+  <a href="#register">Register</a>
+  <a href="#coordinator">Coordinator</a>
+  <a href="#updates">Updates</a>
+</nav>
+
+<section id="events">
+  <h2>Upcoming Events</h2>
+  <div class="grid">
+    <div class="event"><span class="tag">Technical Symposium</span><h3>TechVista 2026</h3>
+      <p>Paper presentations and tech talks</p><p>Date: 24 Oct 2026</p><p>Venue: Main Auditorium</p></div>
+    <div class="event"><span class="tag">Hackathon</span><h3>CodeStorm 24h</h3>
+      <p>24-hour team hackathon, teams of 4</p><p>Date: 30 Oct 2026</p><p>Venue: Innovation Lab</p></div>
+    <div class="event"><span class="tag">Workshop</span><h3>Cloud &amp; DevOps Workshop</h3>
+      <p>Hands-on Docker, Kubernetes and Jenkins</p><p>Date: 02 Nov 2026</p><p>Venue: Lab Block 2</p></div>
+    <div class="event"><span class="tag">Cultural Festival</span><h3>Riviera Nights</h3>
+      <p>Music, dance and drama performances</p><p>Date: 08 Nov 2026</p><p>Venue: Open Air Theatre</p></div>
+    <div class="event"><span class="tag">Inter-College Competition</span><h3>RoboRumble</h3>
+      <p>Robotics challenge across colleges</p><p>Date: 15 Nov 2026</p><p>Venue: Sports Complex</p></div>
+  </div>
+</section>
+
+<section id="schedule">
+  <h2>Event Schedule &amp; Venues</h2>
+  <table>
+    <tr><th>Event</th><th>Date</th><th>Time</th><th>Venue</th></tr>
+    <tr><td>TechVista 2026</td><td>24 Oct 2026</td><td>09:30 AM - 04:00 PM</td><td>Main Auditorium</td></tr>
+    <tr><td>CodeStorm 24h</td><td>30 Oct 2026</td><td>10:00 AM (24 hrs)</td><td>Innovation Lab</td></tr>
+    <tr><td>Cloud &amp; DevOps Workshop</td><td>02 Nov 2026</td><td>10:00 AM - 01:00 PM</td><td>Lab Block 2</td></tr>
+    <tr><td>Riviera Nights</td><td>08 Nov 2026</td><td>06:00 PM - 10:00 PM</td><td>Open Air Theatre</td></tr>
+    <tr><td>RoboRumble</td><td>15 Nov 2026</td><td>09:00 AM - 05:00 PM</td><td>Sports Complex</td></tr>
+  </table>
+</section>
+
+<section id="register">
+  <h2>Registration</h2>
+  <div class="two">
+    <div class="box">
+      <h3 style="margin-bottom:10px">Registration Instructions</h3>
+      <ol>
+        <li>Enter your full name and register number.</li>
+        <li>Choose the event you want to attend.</li>
+        <li>Click Register and note down your Registration ID.</li>
+        <li>Use the ID below to check your registration status.</li>
+        <li>Carry your college ID card on the event day.</li>
+      </ol>
+    </div>
+    <div class="box">
+      <label>Full Name</label><input id="name" type="text" placeholder="e.g. Kavin S">
+      <label>Register Number</label><input id="regno" type="text" placeholder="e.g. 22BCE1234">
+      <label>Event</label>
+      <select id="event">
+        <option>TechVista 2026</option><option>CodeStorm 24h</option>
+        <option>Cloud &amp; DevOps Workshop</option><option>Riviera Nights</option><option>RoboRumble</option>
+      </select>
+      <button onclick="register()">Register</button>
+      <div id="reg-msg" class="msg"></div>
+      <hr style="margin:15px 0">
+      <label>Check Registration Status</label><input id="status-id" type="text" placeholder="Enter Registration ID (e.g. EV1001)">
+      <button onclick="checkStatus()">Check Status</button>
+      <div id="status-msg" class="msg"></div>
+    </div>
+  </div>
+</section>
+
+<section id="coordinator">
+  <h2>Faculty Coordinator Dashboard</h2>
+  <table>
+    <tr><th>Event</th><th>Coordinator</th><th>Participant Limit</th><th>Registered</th></tr>
+    <tr><td>TechVista 2026</td><td>Dr. R. Lakshmi</td><td>200</td><td id="c-TechVista 2026">142</td></tr>
+    <tr><td>CodeStorm 24h</td><td>Prof. A. Joseph</td><td>120</td><td id="c-CodeStorm 24h">96</td></tr>
+    <tr><td>Cloud &amp; DevOps Workshop</td><td>Dr. S. Ganesh</td><td>60</td><td id="c-Cloud &amp; DevOps Workshop">58</td></tr>
+    <tr><td>Riviera Nights</td><td>Prof. M. Fathima</td><td>500</td><td id="c-Riviera Nights">311</td></tr>
+    <tr><td>RoboRumble</td><td>Dr. K. Prakash</td><td>80</td><td id="c-RoboRumble">47</td></tr>
+  </table>
+</section>
+
+<section id="updates">
+  <h2>Event Updates</h2>
+  <div class="update">CodeStorm 24h team registration closes on 27 Oct 2026.</div>
+  <div class="update">Cloud &amp; DevOps Workshop has only a few seats left - register soon!</div>
+  <div class="update">Riviera Nights passes will be issued at the Student Affairs office.</div>
+</section>
+
+<footer>&copy; 2026 College Event Cell | Deployed via Jenkins, Docker &amp; Kubernetes</footer>
+
+<script>
+  const LIMITS = { "TechVista 2026": 200, "CodeStorm 24h": 120, "Cloud & DevOps Workshop": 60, "Riviera Nights": 500, "RoboRumble": 80 };
+  const regs = {};
+  let nextId = 1001;
+
+  function register() {
+    const name = document.getElementById("name").value.trim();
+    const regno = document.getElementById("regno").value.trim();
+    const ev = document.getElementById("event").value;
+    const msg = document.getElementById("reg-msg");
+    if (!name || !regno) { msg.style.color = "#c0392b"; msg.textContent = "Please fill in your name and register number."; return; }
+    const cell = document.getElementById("c-" + ev);
+    const count = Number(cell.textContent);
+    if (count >= LIMITS[ev]) { msg.style.color = "#c0392b"; msg.textContent = "Sorry, " + ev + " is full."; return; }
+    cell.textContent = count + 1;
+    const id = "EV" + nextId++;
+    regs[id] = { name: name, event: ev };
+    msg.style.color = "#27ae60";
+    msg.textContent = "Registered! Your Registration ID: " + id;
+  }
+
+  function checkStatus() {
+    const id = document.getElementById("status-id").value.trim().toUpperCase();
+    const out = document.getElementById("status-msg");
+    if (regs[id]) { out.style.color = "#27ae60"; out.textContent = id + ": Confirmed - " + regs[id].name + " for " + regs[id].event; }
+    else { out.style.color = "#c0392b"; out.textContent = "Registration ID not found."; }
+  }
+</script>
+</body>
+</html>
